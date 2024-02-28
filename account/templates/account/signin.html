@@ -1,0 +1,55 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}" />
+  </head>
+  <body>
+    <div class="auth-container">
+      <div class="header">
+        <legend>Login</legend>
+        <p>Please sign in to continue</p>
+      </div>
+
+      <form action="" method="post">
+        {% csrf_token %}
+        <div class="form-input">
+          <label for="username">Username <span>*</span></label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Username"
+          />
+          <i class="bi bi-person auth-icon-start"></i>
+        </div>
+        <div class="form-input">
+          <label for="username">Password <span>*</span></label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+          />
+          <i class="bi bi-lock auth-icon-start"></i>
+          <i class="bi bi-eye show-password"></i>
+        </div>
+        
+        <button class="auth-btn">Login</button>
+      </form>
+
+      <div class="auth-footer">
+        Don't have an account? <a href="{% url 'account:signup' %}">Sign Up</a>
+      </div>
+    </div>
+  </body>
+</html>
+
