@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "account.apps.AccountConfig",
+    "main.apps.MainConfig",
 ]
 
 MIDDLEWARE = [
@@ -138,3 +139,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR,"media")
 LOGIN_URL = "account/login/"
 LOGOUT_REDIRECT_URL = "account/login/"
 LOGIN_REDIRECT_URL = ""
+
+GEOCODER_API = "3d02e2cb8f3541c09207806c38bd02ac"
