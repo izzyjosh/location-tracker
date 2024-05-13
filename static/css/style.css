@@ -19,7 +19,8 @@ a {
 
 :root {
   --primary-color: #eeeeee;
-  --secondary-color: #4368f9;
+  --secondary-color: #7d7d7dd4;
+  --tertiary-color: #2d2d2d;
 }
 img {
   height: 50px;
@@ -43,7 +44,7 @@ header {
   & h2 {
     font-family: "Orbitron", sans-serif;
     font-size: 1em;
-    color: var(--secondary-color);
+    color: var(--tertiary-color);
   }
 
   & .side {
@@ -78,7 +79,7 @@ nav {
       text-align: center;
 
       & a > i {
-        color: #4368f9;
+        color: var(--tertiary-color);
       }
     }
   }
@@ -133,6 +134,7 @@ nav {
     & .aside {
       background: var(--primary-color);
       display: block;
+      border-top: 5px solid var(--tertiary-color);
 
       & ul > li {
         display: flex;
